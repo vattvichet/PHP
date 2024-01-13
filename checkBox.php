@@ -12,7 +12,7 @@
     <form action="checkBox.php" method="post">
         Dog: <input type="checkbox" name="animals[]" value="Dog">
         <br>
-        Cat: <input type="checkbox" name="animals[]" value="Cat">
+        Fish: <input type="checkbox" name="animals[]" value="Fish">
         <br>
         Capybara: <input type="checkbox" name="animals[]" value="Capybara">
         <br>
@@ -25,11 +25,20 @@
 
     <?php
     $animalsChosen = $_POST['animals'];
+
+    $habitats = [
+        "Dog" => "Land",
+        "Fish" => "Water",
+        "Capybara" => "Forest",
+    ];
     echo "<h3> Animals you have chosen: </h3>";
     echo "<br>";
+
     for ($i = 0; $i < count($animalsChosen); $i++) {
-        echo "<li>" . $animalsChosen[$i] . "<br> </li>";
+        echo "<li>" . $animalsChosen[$i] . "\t\t (Habitat:" . $habitats[$animalsChosen[$i]] . ")" . "<br> </li>";
     }
+
+
     ?>
 
 </body>
