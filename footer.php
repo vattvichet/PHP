@@ -7,4 +7,5 @@ function saySomething($say)
 }
 echo "<h3> This is the footer (from footer.php)</h3>";
 
+
 ?>
