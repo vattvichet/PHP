@@ -40,5 +40,11 @@
 
     ?>
 </body>
+<footer>
+    <?php
+    include "footer.php";
+    saySomething("Thank You (footer.php)");
+    ?>
+</footer>
 
 </html>
